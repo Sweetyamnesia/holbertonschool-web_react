@@ -56,3 +56,17 @@ function createEmployee (salary: number | string) {
         return new Director();
     }
 }
+
+type Employee = Director | Teacher;
+
+function isDirector(employee: Employee): employee is Director {
+  return employee instanceof Director;
+}
+
+function executeWork(employee: Employee) {
+  if (isDirector(employee)) {
+    return employee.workDirectorTasks();
+  } else {
+    return employee.workTeacherTasks();
+  }
+}
