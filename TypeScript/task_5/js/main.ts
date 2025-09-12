@@ -1,11 +1,11 @@
 interface OrderMajorCredits {
 	credits: number;
-	brand: 'MajorCredits';
+	__brand: 'MajorCredits';
 }
 
 interface OrderMinorCredits {
 	credits: number;
-	brand: 'MinorCredits';
+	__brand: 'MinorCredits';
 }
 
 function sumMajorCredits (subject1: OrderMajorCredits, subject2: OrderMajorCredits) {
