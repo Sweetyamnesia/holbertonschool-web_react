@@ -1,8 +1,5 @@
-import { insertRow } from './crud.js';
 import { RowID, RowElement } from './interface.ts';
 
-declare namespace CRUD {
-	function insertRow(row: RowElement);
-	function deleteRow(id: RowID);
-	function updateRow(id: RowID, row: RowElement);
-}
+export function insertRow(row: RowElement);
+export function deleteRow(id: RowID);
+export function updateRow(id: RowID, row: RowElement);
